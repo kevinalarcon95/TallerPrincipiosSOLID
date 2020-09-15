@@ -6,6 +6,7 @@ import co.unicauca.tallerprincipiossolid.domain.TruckParkingCost;
 import co.unicauca.tallerprincipiossolid.domain.Vehicle;
 import co.unicauca.tallerprincipiossolid.domain.VehicleEnum;
 import java.time.LocalTime;
+
 /**
  *
  * @author Kevin Alarcón, Santiago Cordoba
@@ -16,7 +17,7 @@ public class ClienteMain {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+
         LocalTime l1 = LocalTime.parse("01:25:00");
         LocalTime l2 = LocalTime.parse("23:33:00");
         
@@ -25,11 +26,9 @@ public class ClienteMain {
         double result = costoCar.calculateCost(vehicle, l1, l2);
         System.out.println("Car: " + vehicle.getNumberPlate());
         System.out.println("El costo es:" + result);
-      
-        LocalTime l3 = LocalTime.parse("01:00:00");
-        LocalTime l4 = LocalTime.parse("13:15:00");
-        
-    
+        LocalTime l3 = LocalTime.parse("00:00:00");
+        LocalTime l4 = LocalTime.parse("23:00:00");
+
         Vehicle vehicle2 = new Vehicle(VehicleEnum.TRUCK, "2016", "LLM-46E", "Toyota",15000);
         TruckParkingCost costoTruck = new TruckParkingCost();
         double resultTruck = costoTruck.calculateCost(vehicle2, l3 , l4);

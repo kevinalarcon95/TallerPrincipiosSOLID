@@ -22,55 +22,24 @@ public class TruckParkingCostTest {
      */
     @Test
     public void testCalculateCost1() {
-        System.out.println("calculateCost");
-        Vehicle vehicle = null;
-        LocalTime input = null;
-        LocalTime output = null;
+        System.out.println("calculateCost 1");
+        Vehicle vehicle = new Vehicle(VehicleEnum.TRUCK, "2000", "OPH-098", "Toyota", 15000);
+        LocalTime input = LocalTime.parse("03:00:00");
+        LocalTime output = LocalTime.parse("14:17:00");
         TruckParkingCost instance = new TruckParkingCost();
-        double expResult = 0.0;
+        double expResult = 10000;
         double result = instance.calculateCost(vehicle, input, output);
-        assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(expResult, result, 15000);
     }
 
     public void testCalculateCost2() {
-        System.out.println("calculateCost");
-        Vehicle vehicle = null;
-        LocalTime input = null;
-        LocalTime output = null;
+        System.out.println("calculateCost 1");
+        Vehicle vehicle = new Vehicle(VehicleEnum.TRUCK, "2002", "LKG-765", "Mazda", 15000);
+        LocalTime input = LocalTime.parse("02:23:00");
+        LocalTime output = LocalTime.parse("20:12:00");
         TruckParkingCost instance = new TruckParkingCost();
-        double expResult = 0.0;
+        double expResult = 15000;
         double result = instance.calculateCost(vehicle, input, output);
-        assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals(expResult, result, 15000);
     }
-
-    public void testCalculateCost3() {
-        System.out.println("calculateCost");
-        Vehicle vehicle = null;
-        LocalTime input = null;
-        LocalTime output = null;
-        TruckParkingCost instance = new TruckParkingCost();
-        double expResult = 0.0;
-        double result = instance.calculateCost(vehicle, input, output);
-        assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    public void testCalculateCost4() {
-        System.out.println("calculateCost");
-        Vehicle vehicle = null;
-        LocalTime input = null;
-        LocalTime output = null;
-        TruckParkingCost instance = new TruckParkingCost();
-        double expResult = 0.0;
-        double result = instance.calculateCost(vehicle, input, output);
-        assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
 }
